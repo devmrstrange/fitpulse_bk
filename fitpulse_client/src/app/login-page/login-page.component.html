@@ -1,0 +1,49 @@
+<div class="login-container">
+  <div class="row login-section py-0">
+      <div class="col-lg-8 col-sm-9 form-section text-center">
+          <h1 class="mb-4">Welcome Back !</h1>
+          <p>Start your fitness journey today</p>
+          <div class="input-section mt-5">
+              <div>
+                  <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="email" name="email" #emailInput="ngModel" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+                    <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)">
+                      <div *ngIf="emailInput.errors?.['required']" class="error-message">Email is required.</div>
+                      <div *ngIf="emailInput.errors?.['pattern']" class="error-message">Invalid email format.</div>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="password" name="password" #passwordInput="ngModel" required>
+                    <div *ngIf="passwordInput.invalid && (passwordInput.dirty || passwordInput.touched)">
+                      <div *ngIf="passwordInput.errors?.['required']" class="error-message">Password is required.</div>
+                    </div>
+                  </div>
+                  <div class="mb-2 form-check">
+                      <div class="termscard-section">
+                          <div class="checkboxDiv">
+                              <input type="checkbox" class="checkboxCard" [(ngModel)]="keepMeSignedIn" />
+                              <div class="checkboxText">
+                                  Keep me signed in
+                              </div>
+                          </div>
+                          <div class="forgot-password">
+                              <a href="#">Forgot Password?</a>
+                          </div>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn login-button btn-primary w-100" (click)="login()" [disabled]="!keepMeSignedIn || passwordInput.invalid || !passwordInput.touched">Login</button>
+                  <div class="separator">
+                      <hr>
+                       <span class="or-text">or</span>
+                      <hr>
+                  </div>
+                  <button type="submit" class="btn login-button w-100">Login with google</button>
+                </div>
+          </div>
+      </div>
+      <div class="col-lg-4 p-0 image-section ">
+          <div class="banner-section">
+          </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<!-- <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white px-0 py-2 shadow-sm p-3 bg-white rounded">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/fitpulse_logo.png" class="h-18 logo" alt="...">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav mx-sm-auto px-1">
+            <a class="nav-item nav-link active" routerLink="/" aria-current="page">Home</a>
+            <a class="nav-item nav-link" href="">Programs</a>
+            <a class="nav-item nav-link" href="">Recipes</a>
+            <a class="nav-item nav-link" href="">Store</a>
+            <ng-container *ngIf="isLoggedIn; else showLogin">
+                <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
+                    <a class="nav-item nav-link" routerLink="/my-profile">My Profile</a>
+                    <button class="btn btn-sm btn-primary w-full w-lg-auto" (click)="logout()">Logout</button>    
+                </div>
+            </ng-container>
+            <ng-template #showLogin>
+                
+                <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
+                  <a  class="btn btn-sm btn-primary w-full w-lg-auto" routerLink="/login">Login</a>
+                  <a routerLink="/register" class="btn btn-sm btn-primary w-full w-lg-auto">
+                    Register
+                  </a>
+                </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white px-0 py-2 shadow-sm p-3 bg-white rounded">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/fitpulse_logo.png" class="h-18 logo" alt="...">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mx-sm-auto px-1">
+          <a class="nav-item nav-link active" routerLink="/" aria-current="page">Home</a>
+          <a class="nav-item nav-link" href="">Programs</a>
+          <a class="nav-item nav-link" href="">Recipes</a>
+          <a class="nav-item nav-link" href="">Store</a>
+          <ng-container *ngIf="isLoggedIn; else showLogin">
+              <div class="d-flex align-items-lg-center mt-3 mt-lg-0 gap-2">
+                  <a class="btn btn-sm btn-white btn-outline-dark w-full w-lg-auto" routerLink="/my-profile">My Profile</a>
+                  <button class="btn btn-sm btn-primary w-full w-lg-auto" (click)="logout()">Logout</button>    
+              </div>
+          </ng-container>
+          <ng-template #showLogin>
+              <div class="d-flex align-items-lg-center mt-3 mt-lg-0 gap-2">
+                <a routerLink="/login" class="btn btn-sm btn-white btn-outline-dark w-full w-lg-auto">Login</a>
+                <a routerLink="/register" class="btn btn-sm btn-primary w-full w-lg-auto">
+                  Register
+                </a>
+              </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </nav>

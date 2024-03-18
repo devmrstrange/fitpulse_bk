@@ -1,0 +1,69 @@
+.form-section{
+  padding: 4% 14%;
+}
+.image-section{
+  height: auto;
+}
+.banner-section{
+  background-image: url("../../assets/login-frame.png");
+  height: 100%;
+  background-size: cover;
+}
+.separator {
+  display: flex;
+  padding: 15px 0px;
+}
+
+hr {
+  flex-grow: 1;
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+
+.or-text {
+  padding: 0 10px;
+  color: black;
+}
+
+.dividerDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.dividerDiv::after {
+  content: '';
+  background: black;
+}
+.form-control,
+.login-button,
+.login-with-google-btn{
+  border-radius: 3rem;
+  padding: 3%;
+  border-color: gray;
+}
+.termscard-section {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+
+.checkboxDiv {
+  gap: 7px;
+  display: flex;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: black;
+}
+.login-button {
+  padding: 3%;
+  border-color: none;
+  color: black;
+  &:hover {
+      box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+}

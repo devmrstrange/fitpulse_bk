@@ -1,0 +1,41 @@
+<!-- <app-header></app-header> -->
+<br/>
+<div class="registerPage">
+    <div class="formSection">
+        <form class="row g-2 needs-validation formCard registerCard" novalidate>
+            <h6 class="notRegText">
+                NOT REGISTERED? - BECOME USER TODAY!
+            </h6>
+            <div>
+                <input type="text" id="demo" class="form-control textField" [(ngModel)]="username" name="username" #usernameInput="ngModel" placeholder="Name">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div>
+                <input type="text" class="form-control" [(ngModel)]="email" name="email" #emailInput="ngModel" placeholder="Email Address">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div>
+                <input type="text" class="form-control" [(ngModel)]="password" name="password" #passwordInput="ngModel" placeholder="Password">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div>
+                <input type="text" class="form-control" [(ngModel)]="cpassword" name="cpassword" #cpasswordInput="ngModel" placeholder="Confirm Password">
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div *ngIf="passwordMismatch" class="alert alert-danger" role="alert">
+                    Password and Confirm Password do not match!
+                  </div>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit" (click)="register()">Submit form</button>
+            </div>
+        </form>
+    </div>
+</div>
